@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# while loop and if
+counter=0
+while [ $counter -lt 10 ]
+do
+    if [ $counter -eq 3 ]; then
+	echo -e "bad luck"
+    elif [ $counter -eq 7 ]; then
+	echo "good luck"
+    else
+    	echo "Best School"
+    fi
+    counter=$((counter+1))
+done
+
