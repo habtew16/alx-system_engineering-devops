@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# while loop and if
+counter=0
+while [ $counter -lt 10 ]
+do
+    if [ $counter -eq 8 ]; then
+	echo -e "Best School\nHi"
+    else
+    	echo "Best School"
+    fi
+    counter=$((counter+1))
+done
+
