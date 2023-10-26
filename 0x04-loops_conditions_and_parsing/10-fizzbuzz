@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
-#fizzbuzz stuf
+#fizzbuzz
 
 count=1
+
 while [ $count -ne 21 ]
 do
     if [ $((count % 15)) -eq 0 ]
