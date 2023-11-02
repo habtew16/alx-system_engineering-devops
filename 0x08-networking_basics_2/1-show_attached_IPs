@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# show attached ip
+ip a | grep "scope" | grep -Po '(?<=inet )[\d.]+'
