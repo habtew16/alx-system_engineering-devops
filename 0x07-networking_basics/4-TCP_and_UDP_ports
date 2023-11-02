@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# script to show all listing and pid
+netstat -lp
