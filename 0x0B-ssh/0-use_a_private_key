@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # connect to ssh by using -i flag to private path
-ssh -i ~/.ssh/school ubuntu@54.237.21.67
+ssh ubuntu -i ~/.ssh/school
