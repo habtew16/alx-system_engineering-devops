@@ -1,4 +1,4 @@
-#!/usr/bin/env/bash
+#!/usr/bin/env bash
 # using sed  command to perform redirection in web page
 
 sudo apt-get update -y
