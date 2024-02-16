@@ -6,6 +6,7 @@ the top ten hot posts of a subreddit
 import re
 import requests
 
+
 def add_title(dictionary, hot_posts):
     """ Adds item into a list """
     if len(hot_posts) == 0:
@@ -20,6 +21,7 @@ def add_title(dictionary, hot_posts):
     hot_posts.pop(0)
     add_title(dictionary, hot_posts)
 
+
 def recurse(subreddit, dictionary, after=None):
     """ Queries the Reddit API """
     user_agent = 'Mozilla/5.0'
@@ -32,7 +34,9 @@ def recurse(subreddit, dictionary, after=None):
     }
 
     url = f"https://www.reddit.com/r/{subreddit}/hot.json"
-    response = requests.get(url, headers=headers, params=params, allow_redirects=False)
+    response = requests.get(
+            url, headers=headers,
+            params=params, allow_redirects=False)
 
     if response.status_code != 200:
         return None
@@ -44,6 +48,7 @@ def recurse(subreddit, dictionary, after=None):
     if not after:
         return
     recurse(subreddit, dictionary, after=after)
+
 
 def count_words(subreddit, word_list, dictionary=None):
     """ Init function """
